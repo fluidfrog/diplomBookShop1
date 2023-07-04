@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d87a708656d4ec1b7fa6d174d3f59d7" Name="Diagram1">
+        <EntityTypeShape EntityType="BookAppModel.Admin" Width="1.5" PointX="0.75" PointY="10.375" />
+        <EntityTypeShape EntityType="BookAppModel.Adress" Width="1.5" PointX="3" PointY="7.75" />
+        <EntityTypeShape EntityType="BookAppModel.Author" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BookAppModel.Book" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="BookAppModel.Genre" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="BookAppModel.House" Width="1.5" PointX="0.75" PointY="6.375" />
+        <EntityTypeShape EntityType="BookAppModel.Order" Width="1.5" PointX="5.25" PointY="2.875" />
+        <EntityTypeShape EntityType="BookAppModel.Status" Width="1.5" PointX="3" PointY="13" />
+        <EntityTypeShape EntityType="BookAppModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7" />
+        <EntityTypeShape EntityType="BookAppModel.User" Width="1.5" PointX="3" PointY="10.125" />
+        <AssociationConnector Association="BookAppModel.FK_User_Admin" />
+        <AssociationConnector Association="BookAppModel.FK_Order_Adress" />
+        <AssociationConnector Association="BookAppModel.FK_Book_Author" />
+        <AssociationConnector Association="BookAppModel.FK_Book_Genre" />
+        <AssociationConnector Association="BookAppModel.FK_Book_House" />
+        <AssociationConnector Association="BookAppModel.FK_Order_Book" />
+        <AssociationConnector Association="BookAppModel.FK_Order_Status" />
+        <AssociationConnector Association="BookAppModel.FK_Order_User" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

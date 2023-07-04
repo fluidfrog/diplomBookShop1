@@ -1,0 +1,42 @@
+﻿<Page x:Class="DiplomApp.Pages.PayPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DiplomApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PayPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <ListView x:Name="LVOrder" Background="#BBDED6">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image/>
+                        <TextBlock/>
+                        <TextBlock/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            
+        </StackPanel>
+        <StackPanel  Grid.Row="1">
+            <TextBlock Foreground="White" FontSize="18">Адрес:</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock Foreground="White" FontSize="18" Margin="0 5 0 0">Итого:</TextBlock>
+            <TextBlock Foreground="#FF0F7A7E" FontSize="18"></TextBlock>
+        </StackPanel>
+        <Button Grid.Column="1" Grid.Row="1" x:Name="BMakeOrder" Content="Оформить заказ" Background="#FFB6B9" BorderBrush="#FFFFB6B9" Foreground="White" Width="200" FontFamily="Cascadia Code SemiBold" FontSize="16" Height="30"></Button>
+    </Grid>
+</Page>

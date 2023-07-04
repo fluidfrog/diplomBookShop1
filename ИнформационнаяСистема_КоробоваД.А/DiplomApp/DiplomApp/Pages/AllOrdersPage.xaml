@@ -1,0 +1,30 @@
+﻿<Page x:Class="DiplomApp.Pages.AllOrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DiplomApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AllOrdersPage">
+
+    <Grid Background="#BBDED6">
+        <DataGrid x:Name="DGAllOrders" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding ID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Телефон заказчика" Binding="{Binding User.PhoneNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Название книги" Binding="{Binding Book.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ID книги" Binding="{Binding Book.ID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Book.Price}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Фото" Width="100">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Image Source="{Binding Book.Image}" Height="100"></Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

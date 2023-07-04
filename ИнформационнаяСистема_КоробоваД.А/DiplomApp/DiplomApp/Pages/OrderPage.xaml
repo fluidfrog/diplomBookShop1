@@ -1,0 +1,49 @@
+﻿<Page x:Class="DiplomApp.Pages.OrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DiplomApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OrderPage">
+
+    <Grid Background="#BBDED6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="LVMyOrderBook" Grid.Column="0" Background="#BBDED6">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Width="120" Margin="5 10" Background="#61C0BF" Orientation="Vertical">
+                            <Image Source="{Binding Book.Image}" Width="100" Height="110" HorizontalAlignment="Center" Margin="5"></Image>
+                            <TextBlock Text="{Binding Book.Name}" Foreground="White" FontFamily="Cascadia Mono SemiBold" HorizontalAlignment="Left" Margin="5"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Margin="0 5 0 0">Цена:</TextBlock>
+                            <TextBlock Text="{Binding Book.Price}"></TextBlock>
+                            <TextBlock>Количество товаров:</TextBlock>
+                            <TextBox></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <Button x:Name="BCleanTheBucket" Content="Очистить корзину" Background="#FFB6B9" BorderBrush="#FFFFB6B9" Foreground="White" FontFamily="Cascadia Mono SemiBold" FontSize="16" Margin="5 10"></Button>
+            <TextBlock Foreground="#FF0F7A7E" FontSize="18" Margin="0 1 0 5">Данные заказа</TextBlock>
+            <TextBlock Foreground="#FF0F7A7E" FontSize="14" Margin="0 1 0 5">Ваш номер телефона:</TextBlock>
+            <TextBlock Text="{Binding PhoneNumber}" Foreground="#FF0F7A7E" FontSize="14" Margin="0 1 0 5">89111111111</TextBlock>
+            <TextBlock Foreground="#FF0F7A7E" FontSize="14" Margin="0 1 0 5">В вашем заказе</TextBlock>
+            <TextBlock Foreground="#FF0F7A7E" FontSize="14" Margin="0 1 0 5">Товаров:</TextBlock>
+            <TextBlock x:Name="TBTheEndAmount" Foreground="#FF0F7A7E" FontSize="14" Margin="0 1 0 5">3</TextBlock>
+            <TextBlock Foreground="#FF0F7A7E" FontSize="14" Margin="0 1 0 5">Итоговая сумма заказа в рублях:</TextBlock>
+            <TextBlock x:Name="TBSummOfOrder" Foreground="#FF0F7A7E" FontSize="14" Margin="0 1 0 5">3698</TextBlock>
+            <TextBlock Foreground="#FF0F7A7E" FontSize="14" Margin="0 1 0 5">Выберите адрес магазина:</TextBlock>
+            <ComboBox x:Name="CBAdressOfShop" SelectedItem="{Binding Adress}" DisplayMemberPath="City"></ComboBox>
+            <Button x:Name="BMakeTheOrder" Content="Заказать" Background="#FFB6B9" BorderBrush="#FFFFB6B9" Foreground="White" FontFamily="Cascadia Mono SemiBold" FontSize="16" Margin="5 10" Height="30"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
